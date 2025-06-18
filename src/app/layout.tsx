@@ -1,27 +1,35 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Nanum_Gothic } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
-
+const nanumGothic = Nanum_Gothic({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  display: "swap",
+});
 export const metadata: Metadata = {
   title: {
-    default: "Bogofit - 건강한 라이프스타일",
-    template: "%s | Bogofit",
+    default: "보고핏(BOGOFIT) - AI 가상피팅, 내 몸에 딱 맞는 패션 추천",
+    template: "%s | 보고핏(BOGOFIT) - AI 가상피팅",
   },
   description:
-    "Bogofit - 당신의 건강한 라이프스타일을 위한 최적의 솔루션. AI 기반 가상 피팅 플랫폼으로 쇼핑의 새로운 경험을 제공합니다.",
+    "보고핏(BOGOFIT)은 인공지능(AI) 기반 가상 피팅 서비스로, 내 몸에 꼭 맞는 패션 아이템을 쉽고 빠르게 찾고, 실제 착용 모습을 미리 확인할 수 있습니다. 실시간 피팅, 맞춤 사이즈 추천, 스타일링 제안까지! 온라인 쇼핑의 새로운 기준을 경험하세요.",
   keywords: [
+    "보고핏",
+    "BOGOFIT",
     "가상 피팅",
     "AI 피팅",
-    "온라인 쇼핑",
-    "패션",
+    "패션 추천",
     "사이즈 추천",
-    "스타일 추천",
+    "AI 스타일링",
+    "온라인 쇼핑",
+    "스마트 쇼핑",
+    "실시간 피팅",
+    "패션테크",
   ],
-  authors: [{ name: "Bogofit Team" }],
-  creator: "Bogofit",
-  publisher: "Bogofit",
+  authors: [{ name: "보고핏(BOGOFIT) Team" }],
+  creator: "보고핏(BOGOFIT)",
+  publisher: "보고핏(BOGOFIT)",
   formatDetection: {
     email: false,
     address: false,
@@ -32,16 +40,17 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Bogofit - 건강한 라이프스타일",
-    description: "Bogofit - 당신의 건강한 라이프스타일을 위한 최적의 솔루션",
+    title: "보고핏(BOGOFIT) - AI 가상피팅, 내 몸에 딱 맞는 패션 추천",
+    description:
+      "AI 가상피팅 보고핏(BOGOFIT)에서 온라인으로 내 몸에 꼭 맞는 스타일을 쉽고 빠르게 미리 입어보고, 맞춤형 사이즈와 패션 아이템을 추천받으세요.",
     url: "https://bogofit.kr",
-    siteName: "Bogofit",
+    siteName: "보고핏(BOGOFIT)",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/Header/BOGOFIT.svg",
         width: 1200,
         height: 630,
-        alt: "Bogofit",
+        alt: "보고핏(BOGOFIT) AI 가상피팅",
       },
     ],
     locale: "ko_KR",
@@ -49,8 +58,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bogofit - 건강한 라이프스타일",
-    description: "Bogofit - 당신의 건강한 라이프스타일을 위한 최적의 솔루션",
+    title: "보고핏(BOGOFIT) - AI 가상피팅, 내 몸에 딱 맞는 패션 추천",
+    description:
+      "보고핏(BOGOFIT)은 AI 가상피팅 및 맞춤형 패션 추천 서비스를 제공합니다.",
     images: ["/twitter-image.jpg"],
     creator: "@bogofit",
   },
@@ -77,7 +87,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
-      <body className={inter.className}>{children}</body>
+      <body className={nanumGothic.className}>{children}</body>
     </html>
   );
 }

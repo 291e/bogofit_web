@@ -44,6 +44,17 @@ export const Section1 = forwardRef<HTMLDivElement>((props, ref) => {
             </h1>
           </div>
 
+          <div className="flex flex-col items-center justify-center ">
+            <Image
+              src="/qrcode.png"
+              alt="보고핏 키오스크"
+              width={100}
+              height={100}
+              priority
+              className="object-contain"
+            />
+          </div>
+
           {/* 메인 콘텐츠 영역 */}
           <div className="flex flex-col md:flex-row justify-between w-full gap-10">
             {/* 왼쪽: 키오스크 이미지 */}
